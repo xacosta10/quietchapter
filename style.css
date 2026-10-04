@@ -1,0 +1,109 @@
+:root {
+  --paper: #F4EFE4;
+  --card: #FBF8F1;
+  --line: #D8D0BA;
+  --ink: #3E3A32;
+  --ink-soft: #4A4534;
+  --muted: #8A8264;
+  --faint: #9A9376;
+  --link: #9A7C2E;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 17px/1.6 "Karla", system-ui, -apple-system, sans-serif;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 20px 72px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+header img {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+}
+
+h1, h2 {
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+h1 { font-size: 36px; line-height: 1.15; margin: 0; }
+h2 { font-size: 24px; margin: 40px 0 8px; }
+
+.updated {
+  color: var(--faint);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 4px 0 28px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 4px 22px;
+}
+
+a { color: var(--link); }
+
+ul { padding-left: 1.2em; }
+li { margin: 6px 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+th { color: var(--muted); font-weight: 500; }
+tr:last-child td { border-bottom: 0; }
+
+.quiet {
+  font-family: "EB Garamond", Georgia, serif;
+  font-style: italic;
+  color: var(--faint);
+}
+
+footer {
+  margin-top: 56px;
+  color: var(--faint);
+  font-size: 14px;
+}
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  h1 { font-size: 30px; }
+  table, thead, tbody, tr, th, td { display: block; }
+  thead { display: none; }
+  td { border-bottom: 0; padding: 4px 12px; }
+  tr { border-bottom: 1px solid var(--line); padding: 8px 0; }
+  td:first-child { font-weight: 500; }
+}
